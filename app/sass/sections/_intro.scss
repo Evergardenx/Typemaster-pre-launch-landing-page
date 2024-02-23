@@ -1,0 +1,166 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.intro {
+  max-width: 25rem;
+  margin: 0 auto 0 auto;
+
+  &__text h2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    text-transform: uppercase;
+    margin: 0 3.75rem 1.5rem 3.75rem;
+    color: $dark-blue;
+  }
+
+  &__text p {
+    @include paragraph;
+    text-align: center;
+    margin: 0 1.5rem 6.9375rem 1.5rem;
+  }
+
+  // Mobile needs to be behind @media too.
+  @media screen and (max-width: 47.9375rem) {
+    &__images {
+      display: flex;
+      margin-bottom: 4.6875rem;
+    }
+
+    &__image-left {
+      background-image: url(../../assets/mobile/image-phone-and-keyboard.jpg);
+      background-color: hsla(22, 89%, 52%, 1);
+      background-blend-mode: multiply ;
+      width: 8.0625rem;
+      height: 12.0625rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 0.9375rem;
+      margin-right: 1.5rem;
+      margin-left: -1.375rem;
+    }
+
+    &__image-right {
+      background-image: url(../../assets/mobile/image-glass-and-keyboard.jpg);
+      width: 13.75rem;
+      height: 12.0625rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 0.9375rem;
+    }
+  }
+
+  // Tablet Version
+  @media screen and (min-width: 48rem) and (max-width: 75.625rem) {
+    max-width: 50rem;
+    margin-bottom: 8.875rem;
+
+    &__images {
+      display: flex;
+      margin-bottom: 4.5rem;
+    }
+
+    &__image-left {
+      background-image: url(../../assets/tablet/image-phone-and-keyboard.jpg);
+      background-color: hsla(22, 89%, 52%, 1);
+      background-blend-mode: multiply ;
+      width: 13.375rem;
+      height: 20rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 0.9375rem;
+      margin: 0 1.875rem 0 2.4375rem;
+    }
+
+    &__image-right {
+      background-image: url(../../assets/tablet/image-glass-and-keyboard.jpg);
+      width: 27.5rem;
+      height: 20rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 0.9375rem;
+    }
+
+    &__text {
+      display: flex;
+    }
+
+    &__text h2 {
+      text-align: left;
+      margin-left: 2.4375rem;
+      margin-bottom: 0;
+    }
+
+    &__text p {
+      text-align: left;
+      align-self: center;
+      margin-bottom: 0;
+    }
+  }
+
+  // Desktop version
+  @media screen and (min-width: 75.625rem) {
+    max-width: 90rem;
+    display: flex;
+    justify-content: center;
+
+    &__images {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 10.5rem;
+    }
+
+    &__image-left {
+      background-image: url(../../assets/desktop/image-phone-and-keyboard.jpg);
+      background-color: hsla(22, 89%, 52%, 1);
+      background-blend-mode: multiply ;
+      width: 15.9375rem;
+      height: 30rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 0.9375rem;
+      margin: 0 30px 0 2.4375rem;
+    }
+
+    &__image-left:before {
+      content: " ";
+      position: absolute;
+      background-image: url(../../assets/shared/pattern-square.svg);
+      width: 15.9375rem;
+      height: 14.75rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 0.9375rem;
+      margin-top: 15.25rem;
+      margin-right: 1.875rem;
+      left: -8.125rem;
+      z-index: -1;
+    }
+
+    &__image-right {
+      background-image: url(../../assets/desktop/image-glass-and-keyboard.jpg);
+      width: 27.8125rem;
+      height: 30rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 0.9375rem;
+    }
+
+    &__text {
+      margin: 8.875rem 0rem 0 0px;
+    }
+
+    &__text h2 {
+      max-width: 15.9375rem;
+      text-align: left;
+      margin-left: 7.8125rem;
+    }
+
+    &__text p {
+      max-width: 15.9375rem;
+      text-align: left;
+      margin-left: 7.8125rem;
+    }
+  }
+}

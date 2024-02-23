@@ -1,0 +1,8 @@
+@use '../core/typography' as *;
+@use '../abstracts/variables' as *;
+
+body {
+  font-family: $barlow;
+  background-color: $real-white;
+  overflow-x: hidden;
+}

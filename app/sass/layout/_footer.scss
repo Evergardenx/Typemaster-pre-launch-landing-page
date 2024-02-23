@@ -1,0 +1,14 @@
+@use '../abstracts/mixins' as *;
+
+
+.footer {
+    max-width: 23.4375rem;
+    @include paragraph;
+    line-height: 1.625rem;
+    text-align: center;
+    margin: 2rem auto 3.125rem auto; 
+}
+
+.footer span {
+    font-weight: 500;
+}

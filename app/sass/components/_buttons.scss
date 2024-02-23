@@ -1,0 +1,22 @@
+// The default button properties
+%button-default {
+    align-self: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    line-height: 1.625rem;
+    font-style: normal;
+    font-size: 0.875rem; // 16px from .Fig file seems too big!?
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 10.9375rem;
+    height: 3.625rem;
+    padding: 1.625rem 1rem;
+}
+
+%button-mobile {
+    @extend %button-default;
+    width: 9.4375rem;
+    height: 3rem;
+    padding: 0.6875rem 0.8438rem;
+}

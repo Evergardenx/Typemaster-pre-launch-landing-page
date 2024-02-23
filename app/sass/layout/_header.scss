@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as *;
+@use '../components/buttons' as *;
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  max-width: 21.875rem;
+  text-align: center;
+  margin: 1.4375rem auto 4rem auto;
+  
+
+  &__logo {
+    align-self: center;
+  }
+
+  &__button {
+    @extend %button-mobile;
+    background-color: $light-blue;
+    color: $dark-blue;
+    margin-left: 8.5rem;
+  }
+
+  &__button:hover {
+    background-color: $dark-blue;
+    color: $real-white;
+  }
+
+  // Tablet Version
+  @media screen and (min-width: 48rem) and (max-width: 75.625rem) {
+    justify-content: space-between;
+    max-width: 45.3125rem;
+    margin: 2.4375rem auto 3.875rem auto;
+
+    &__button {
+      width: 10.9375rem;
+      height: 3.625rem;
+    }
+  }
+
+  // Desktop version
+  @media screen and (min-width: 75.625rem) {
+    max-width: 69.375rem;
+    justify-content: space-between;
+    margin: 3.4375rem auto 5.1875rem auto;
+
+    &__button {
+      width: 10.9375rem;
+      height: 3.625rem;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.features {
+  max-width: 25rem;
+  margin: 0 auto 0 auto;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 1.5rem;
+  }
+
+  &__block h3 {
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+    color: $dark-blue;
+    margin: 3rem 3.4375rem 1.5rem 3.4375rem;
+  }
+
+  &__block p {
+    @include paragraph;
+    margin: 0 0 4rem 0;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $dark-orange;
+    width: 4.0625rem;
+    height: 4.0625rem;
+    border-radius: 1rem;
+  }
+
+  // Tablet Version
+  @media screen and (min-width: 48rem) and (max-width: 75.625rem) {
+    max-width: 50rem;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__block {
+      max-width: 17.5625rem;
+      margin: 0 4.3125rem 4.5rem 0;
+      align-items: flex-start;
+    }
+
+    &__block h3 {
+      width: 13.4375rem;
+      text-align: left;
+      margin: 2.5rem 0 1.5rem 0;
+    }
+
+    &__block p {
+      width: 17.5625rem;
+      text-align: left;
+      margin: 0 0 1.5rem 0;
+    }
+  }
+
+
+  // Desktop version
+  @media screen and (min-width: 75.625rem) {
+    max-width: 90rem;
+    display: flex;
+    justify-content: center;
+
+    &__block {
+      max-width: 15.9375rem;
+      margin: 0 1.875rem 4.5rem 0;
+      align-items: flex-start;
+    }
+
+    &__block h3 {
+      width: 13.4375rem;
+      text-align: left;
+      margin: 2.5rem 0 1.5rem 0;
+    }
+
+    &__block p {
+      width: 15.9375rem;
+      text-align: left;
+      margin: 0 0 1.5rem 0;
+    }
+
+  }
+}
+
+

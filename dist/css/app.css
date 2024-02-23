@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap");
+body {
+  font-family: "Barlow", sans-serif;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cta__button, .header__button {
+  align-self: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  line-height: 1.625rem;
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 10.9375rem;
+  height: 3.625rem;
+  padding: 1.625rem 1rem;
+}
+
+.cta__button, .header__button {
+  width: 9.4375rem;
+  height: 3rem;
+  padding: 0.6875rem 0.8438rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  max-width: 21.875rem;
+  text-align: center;
+  margin: 1.4375rem auto 4rem auto;
+}
+.header__logo {
+  align-self: center;
+}
+.header__button {
+  background-color: #e8eff2;
+  color: #162441;
+  margin-left: 8.5rem;
+}
+.header__button:hover {
+  background-color: #162441;
+  color: white;
+}
+@media screen and (min-width: 48rem) and (max-width: 75.625rem) {
+  .header {
+    justify-content: space-between;
+    max-width: 45.3125rem;
+    margin: 2.4375rem auto 3.875rem auto;
+  }
+  .header__button {
+    width: 10.9375rem;
+    height: 3.625rem;
+  }
+}
+@media screen and (min-width: 75.625rem) {
+  .header {
+    max-width: 69.375rem;
+    justify-content: space-between;
+    margin: 3.4375rem auto 5.1875rem auto;
+  }
+  .header__button {
+    width: 10.9375rem;
+    height: 3.625rem;
+  }
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 auto;
+  max-width: 25rem;
+}
+.cta__intro {
+  margin: 0 24px 0 24px;
+}
+.cta__intro h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 3rem;
+  color: #162441;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0 0 2rem 0;
+}
+.cta__para {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  color: #7b8bad;
+  margin: 0 0rem 2rem 0rem;
+}
+.cta__footer {
+  display: flex;
+  min-width: 19.375rem;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 2.5625rem 4rem 0rem;
+}
+.cta__footer p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+  color: #7b8bad;
+  text-transform: uppercase;
+  margin-left: 2rem;
+}
+.cta__button {
+  background-color: #f26818;
+  color: white;
+}
+.cta__button:hover {
+  background-color: #ff9b61;
+}
+.cta__image {
+  background-image: url(../../assets/mobile/image-keyboard.jpg);
+  width: 23.25rem;
+  height: 20.6875rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.9375rem;
+  position: relative;
+  right: -1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 48rem) and (max-width: 75.625rem) {
+  .cta {
+    flex-direction: row;
+    max-width: 50rem;
+    margin-bottom: 2.5rem;
+  }
+  .cta__intro {
+    align-self: center;
+    max-width: 21.1875rem;
+    margin-right: 4.3125rem;
+    margin-left: 2.4375rem;
+  }
+  .cta__para {
+    margin: 2.4375rem 0 2.4375rem 0;
+  }
+  .cta__footer {
+    min-width: 21.1875rem;
+  }
+  .cta__button {
+    width: 10.9375rem;
+    height: 3.625rem;
+  }
+  .cta__image {
+    background-image: url(../../assets/tablet/image-keyboard.jpg);
+    width: 29.875rem;
+    height: 26.5625rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 75.625rem) {
+  .cta {
+    flex-direction: row;
+    max-width: 90rem;
+  }
+  .cta__intro {
+    max-width: 27.8125rem;
+    margin: 4.0625rem 7.8125rem 0 10.3125rem;
+  }
+  .cta__para {
+    margin: 1.5rem 0 2.5rem 0;
+  }
+  .cta__intro h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+  .cta__intro p {
+    font-size: 1.125rem;
+  }
+  .cta__footer {
+    max-width: 27.8125rem;
+    justify-content: left;
+  }
+  .cta__button {
+    width: 10.9375rem;
+    height: 3.625rem;
+  }
+  .cta__image {
+    background-image: url(../../assets/desktop/image-keyboard.jpg);
+    width: 33.75rem;
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 1.875rem;
+  }
+  .cta__image::after {
+    content: " ";
+    position: absolute;
+    background-image: url(../../assets/shared/pattern-square.svg);
+    width: 15.9375rem;
+    height: 14.75rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.9375rem;
+    margin-bottom: 15.25rem;
+    right: -17.5rem;
+    z-index: -1;
+  }
+}
+
+.intro {
+  max-width: 25rem;
+  margin: 0 auto 0 auto;
+}
+.intro__text h2 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  text-transform: uppercase;
+  margin: 0 3.75rem 1.5rem 3.75rem;
+  color: #162441;
+}
+.intro__text p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  color: #7b8bad;
+  text-align: center;
+  margin: 0 1.5rem 6.9375rem 1.5rem;
+}
+@media screen and (max-width: 47.9375rem) {
+  .intro__images {
+    display: flex;
+    margin-bottom: 4.6875rem;
+  }
+  .intro__image-left {
+    background-image: url(../../assets/mobile/image-phone-and-keyboard.jpg);
+    background-color: #f26818;
+    background-blend-mode: multiply;
+    width: 8.0625rem;
+    height: 12.0625rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.9375rem;
+    margin-right: 1.5rem;
+    margin-left: -1.375rem;
+  }
+  .intro__image-right {
+    background-image: url(../../assets/mobile/image-glass-and-keyboard.jpg);
+    width: 13.75rem;
+    height: 12.0625rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.9375rem;
+  }
+}
+@media screen and (min-width: 48rem) and (max-width: 75.625rem) {
+  .intro {
+    max-width: 50rem;
+    margin-bottom: 8.875rem;
+  }
+  .intro__images {
+    display: flex;
+    margin-bottom: 4.5rem;
+  }
+  .intro__image-left {
+    background-image: url(../../assets/tablet/image-phone-and-keyboard.jpg);
+    background-color: #f26818;
+    background-blend-mode: multiply;
+    width: 13.375rem;
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.9375rem;
+    margin: 0 1.875rem 0 2.4375rem;
+  }
+  .intro__image-right {
+    background-image: url(../../assets/tablet/image-glass-and-keyboard.jpg);
+    width: 27.5rem;
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.9375rem;
+  }
+  .intro__text {
+    display: flex;
+  }
+  .intro__text h2 {
+    text-align: left;
+    margin-left: 2.4375rem;
+    margin-bottom: 0;
+  }
+  .intro__text p {
+    text-align: left;
+    align-self: center;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 75.625rem) {
+  .intro {
+    max-width: 90rem;
+    display: flex;
+    justify-content: center;
+  }
+  .intro__images {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10.5rem;
+  }
+  .intro__image-left {
+    background-image: url(../../assets/desktop/image-phone-and-keyboard.jpg);
+    background-color: #f26818;
+    background-blend-mode: multiply;
+    width: 15.9375rem;
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.9375rem;
+    margin: 0 30px 0 2.4375rem;
+  }
+  .intro__image-left:before {
+    content: " ";
+    position: absolute;
+    background-image: url(../../assets/shared/pattern-square.svg);
+    width: 15.9375rem;
+    height: 14.75rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.9375rem;
+    margin-top: 15.25rem;
+    margin-right: 1.875rem;
+    left: -8.125rem;
+    z-index: -1;
+  }
+  .intro__image-right {
+    background-image: url(../../assets/desktop/image-glass-and-keyboard.jpg);
+    width: 27.8125rem;
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.9375rem;
+  }
+  .intro__text {
+    margin: 8.875rem 0rem 0 0px;
+  }
+  .intro__text h2 {
+    max-width: 15.9375rem;
+    text-align: left;
+    margin-left: 7.8125rem;
+  }
+  .intro__text p {
+    max-width: 15.9375rem;
+    text-align: left;
+    margin-left: 7.8125rem;
+  }
+}
+
+.features {
+  max-width: 25rem;
+  margin: 0 auto 0 auto;
+}
+.features__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 1.5rem;
+}
+.features__block h3 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+  color: #162441;
+  margin: 3rem 3.4375rem 1.5rem 3.4375rem;
+}
+.features__block p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  color: #7b8bad;
+  margin: 0 0 4rem 0;
+}
+.features__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f26818;
+  width: 4.0625rem;
+  height: 4.0625rem;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 48rem) and (max-width: 75.625rem) {
+  .features {
+    max-width: 50rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .features__block {
+    max-width: 17.5625rem;
+    margin: 0 4.3125rem 4.5rem 0;
+    align-items: flex-start;
+  }
+  .features__block h3 {
+    width: 13.4375rem;
+    text-align: left;
+    margin: 2.5rem 0 1.5rem 0;
+  }
+  .features__block p {
+    width: 17.5625rem;
+    text-align: left;
+    margin: 0 0 1.5rem 0;
+  }
+}
+@media screen and (min-width: 75.625rem) {
+  .features {
+    max-width: 90rem;
+    display: flex;
+    justify-content: center;
+  }
+  .features__block {
+    max-width: 15.9375rem;
+    margin: 0 1.875rem 4.5rem 0;
+    align-items: flex-start;
+  }
+  .features__block h3 {
+    width: 13.4375rem;
+    text-align: left;
+    margin: 2.5rem 0 1.5rem 0;
+  }
+  .features__block p {
+    width: 15.9375rem;
+    text-align: left;
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+.footer {
+  max-width: 23.4375rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  color: #7b8bad;
+  line-height: 1.625rem;
+  text-align: center;
+  margin: 2rem auto 3.125rem auto;
+}
+
+.footer span {
+  font-weight: 500;
+}

@@ -1,0 +1,162 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../components/buttons' as *;
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 auto;
+  max-width: 25rem;
+  
+
+  &__intro {
+    margin: 0 24px 0 24px;
+  }
+
+  &__intro h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 3rem;
+    color: $dark-blue;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0 0 2rem 0;
+  }
+
+  &__para {
+    @include paragraph;
+    margin: 0 0rem 2rem 0rem;
+  }
+
+  &__footer {
+    display: flex;
+    min-width: 19.375rem;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 2.5625rem 4rem 0rem;
+  }
+
+  &__footer p {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.625rem;
+    color: $medium-blue;
+    text-transform: uppercase;
+    margin-left: 2rem;
+  }
+
+  &__button {
+    @extend %button-mobile;
+    background-color: $dark-orange;
+    color: $real-white;
+  }
+
+  &__button:hover {
+    background-color: $light-orange;
+  }
+
+  &__image {
+    background-image: url(../../assets/mobile/image-keyboard.jpg);
+    width: 23.25rem;
+    height: 20.6875rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.9375rem;
+    position: relative;
+    right: -1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  // Tablet Version
+  @media screen and (min-width: 48rem) and (max-width: 75.625rem) {
+    flex-direction: row;
+    max-width: 50rem;
+    margin-bottom: 2.5rem;
+
+    &__intro {
+      align-self: center;
+      max-width: 21.1875rem;
+      margin-right: 4.3125rem;
+      margin-left: 2.4375rem;
+    }
+
+    &__para {
+      margin: 2.4375rem 0 2.4375rem 0;
+    }
+
+    &__footer {
+      min-width: 21.1875rem;
+    }
+
+    &__button {
+      width: 10.9375rem;
+      height: 3.625rem;
+    }
+
+    &__image {
+      background-image: url(../../assets/tablet/image-keyboard.jpg);
+      width: 29.875rem;
+      height: 26.5625rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 0;
+    }
+  }
+
+  // Desktop version
+  @media screen and (min-width: 75.625rem) {
+    flex-direction: row;
+    max-width: 90rem;
+
+    &__intro {
+      max-width: 27.8125rem;
+      margin: 4.0625rem 7.8125rem 0 10.3125rem;
+    }
+
+    &__para {
+      margin: 1.5rem 0 2.5rem 0;
+    }
+
+    &__intro h1 {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+    }
+
+    &__intro p {
+      font-size: 1.125rem;
+    }
+
+    &__footer {
+      max-width: 27.8125rem;
+      justify-content: left;
+    }
+
+    &__button {
+      width: 10.9375rem;
+      height: 3.625rem;
+    }
+
+    &__image {
+      background-image: url(../../assets/desktop/image-keyboard.jpg);
+      width: 33.75rem;
+      height: 30rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 1.875rem;
+    }
+
+    &__image::after {
+      content: " ";
+      position: absolute;
+      background-image: url(../../assets/shared/pattern-square.svg);
+      width: 15.9375rem;
+      height: 14.75rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 0.9375rem;
+      margin-bottom: 15.25rem;
+      right: -17.5rem;
+      z-index: -1;
+    }
+  }
+}
